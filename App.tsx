@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-              <Text>Oi</Text>
+              <Image source={
+                require("./src/assets/imagem1.png")}></Image>
+
+                <Image source={
+                require("./src/assets/imagem2.png")}></Image>
+
+              <Image source={
+                require("./src/assets/imagem3.png")}></Image>
+                
       </View>
     </View>
   );
@@ -16,12 +24,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF',
+    backgroundColor: '#fff',
     
   },
   header:{
-    minhHeiht:70,
-    backgroundColor: "#4369B0",
-    paddinTop:30,
+    minHeight:70,
+    backgroudColor:"#4369B0",
+    paddingVertical:30,
+    paddingTop:30,
+    flexDirection:"row",
+    justifyCountent:"space-batween",
+    alignItem:"center",
+    paddingHorizontal:30,
   },
 });
