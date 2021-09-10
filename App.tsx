@@ -2,6 +2,20 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
 
+const LinksHeader = ()=> {
+  return(// Aui dentro eu colo meu JSX
+    <View style={StyleLinksHeader.container}> 
+      <Text>Ola</Text>
+    </View>
+  );
+};
+
+const StyleLinksHeader = StyleSheet.create({
+  container:{
+     backgroudColor:"blue", color:"white"
+  }
+ });
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -12,18 +26,20 @@ export default function App() {
            <View style={styles.inputTextView}> 
          <Image source={
                 require("./src/assets/imagem2.png")}></Image>
-               
-          </View>
-              <Image source={
-                require("./src/assets/imagem3.png")}></Image> 
-                 <TextInput 
+               <TextInput 
                  style={styles.textInput}
                  placeholder="Search"
                  placeholderTextColor="#F5FFFF"
                  >  
-                  
+
+
                  </TextInput>
+          </View>
+              <Image source={
+                require("./src/assets/imagem3.png")}></Image> 
+                 
                 </View>
+       <LinksHeader></LinksHeader>
     </View>
   );
 }
