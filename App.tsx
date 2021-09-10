@@ -1,19 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, ProgressViewIOSComponent} from 'react-native';
+
+const OneLinkHeader = (props:any)=>{
+  return(
+    <View> 
+      <Text style={StyleOneLinkHeader.link}>{ProgressViewIOSComponent.nome}</Text>
+    </View>
+  )
+};
 
 const LinksHeader = ()=> {
-  return(// Aui dentro eu colo meu JSX
+  return( /* Aui dentro eu colo meu JSX */
     <View style={StyleLinksHeader.container}> 
-      <Text>Ola</Text>
+     {/*  <Text style ={{color: "#4A4A4C"}}>Home</Text>
+      <Text style={StyleLinksHeader.link}>Post</Text>
+      <Text>Videos</Text>
+      <Text>Photos</Text>
+      <Text>Community</Text> */}
+      <OneLinkHeader nome="Home"/>
+      <OneLinkHeader nome="Post"/>
+      <OneLinkHeader nome="Videos"/>
+      <OneLinkHeader nome="Photos"/>
+      <OneLinkHeader nome="Community"/>
+
+
+      <OneLinkHeader/>
     </View>
   );
 };
+const StyleOneLinkHeader = StyleSheet.create({
+  link:{
+    color: "#4A4A4C"
+  },
+ });
 
 const StyleLinksHeader = StyleSheet.create({
   container:{
-     backgroudColor:"blue", color:"white"
-  }
+/*      backgroudColor:"lightblue", */ 
+     color:"white",
+     flexDirection:"row",
+     justifyContent:"space-between",
+     paddingHorizontal:35,
+     paddingVertical:10,
+     borderBottomColor:"#f0f0f0",
+     borderBottomWidth:0.5,
+  },
  });
 
 export default function App() {
