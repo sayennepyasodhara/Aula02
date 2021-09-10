@@ -1,22 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-              <Image source={
+            <Image source={
                 require("./src/assets/imagem1.png")}></Image>
-
-                <Image source={
+           <View style={styles.inputTextView}> 
+         <Image source={
                 require("./src/assets/imagem2.png")}></Image>
-
+               
+          </View>
               <Image source={
-                require("./src/assets/imagem3.png")}></Image>
-                
-      </View>
+                require("./src/assets/imagem3.png")}></Image> 
+                 <TextInput 
+                 style={styles.textInput}
+                 placeholder="Search"
+                 placeholderTextColor="#F5FFFF"
+                 >  
+                  
+                 </TextInput>
+                </View>
     </View>
   );
 }
@@ -30,11 +37,24 @@ const styles = StyleSheet.create({
   header:{
     minHeight:70,
     backgroudColor:"#4369B0",
-    paddingVertical:30,
-    paddingTop:30,
+    paddingVertical:30, 
+    paddingTop:50,
     flexDirection:"row",
     justifyCountent:"space-batween",
     alignItem:"center",
     paddingHorizontal:30,
+   
+  },
+  inputTextView:{
+      borderRadius:28,
+      backgroundColor:"#2c4877",
+      height:40, 
+      alignItems: "center",
+      flexDirection:"row",
+  },
+  textInput:{
+     flex:1,
+     paddingRight:10,
+     color:"#F5FFFF",
   },
 });
