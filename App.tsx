@@ -31,7 +31,11 @@ const LinksHeader = () => {
     </View>
   );
 };
-
+export default function App(){
+  return(
+    <Home/>
+  );
+}
 const styleLinksHeader = StyleSheet.create({
   container: {
     //backgroundColor:"lightblue",
@@ -50,12 +54,12 @@ const Home = () => {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-        <Image source={require("./srcs/assets/esquerd.png") }> </Image>
+          <Image source={require("./src/assets/esquerd.png") }/> 
         <View style={styles.inputTextView}>
-          <Image source={
-            require("./srcs/assets/direit.png")
-          }>
-          </Image>
+           <Image source={
+            require("./src/assets/lup.png")
+          }/>
+          
           <TextInput
             style={styles.textInput}
             placeholder="Search"
@@ -65,10 +69,9 @@ const Home = () => {
 
           </TextInput>
         </View>
-        <Image source={
-          require("./srcs/assets/lup.png")
-        }>
-        </Image>
+         <Image source={
+          require("./src/assets/ceta.png")
+        }/>
       </View>
       <LinksHeader></LinksHeader>
 
@@ -107,5 +110,6 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     color: "#F5FFFF",
   },
+  
 });
 
