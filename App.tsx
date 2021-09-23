@@ -50,7 +50,7 @@ const Home = () => {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-        <Image source={require("./src/assets/esquerd.png") }> </Image>
+        <Image source={require("./srcs/assets/esquerd.png") }> </Image>
         <View style={styles.inputTextView}>
           <Image source={
             require("./srcs/assets/direit.png")
