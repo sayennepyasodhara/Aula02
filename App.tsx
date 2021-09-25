@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
 
 const OneLinkHeader = (props: any) => {
   return (
@@ -15,6 +15,7 @@ const styleOneLinkHeader = StyleSheet.create({
   }
 });
 
+
 const LinksHeader = () => {
   return (// Aqui dentro eu coloco meu JSX
     <View style={styleLinksHeader.container}>
@@ -28,14 +29,17 @@ const LinksHeader = () => {
       <OneLinkHeader nome="Videos" />
       <OneLinkHeader nome="Photos" />
       <OneLinkHeader nome="Community" />
+
     </View>
   );
 };
-export default function App(){
-  return(
-    <Home/>
+
+export default function App() {
+  return (
+    <Home />
   );
 }
+
 const styleLinksHeader = StyleSheet.create({
   container: {
     //backgroundColor:"lightblue",
@@ -54,12 +58,12 @@ const Home = () => {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.header}>
-          <Image source={require("./src/assets/esquerd.png") }/> 
+        <Image source={require("./src/assets/esquerd.png")} />
         <View style={styles.inputTextView}>
-           <Image source={
+          <Image source={
             require("./src/assets/lup.png")
-          }/>
-          
+          } />
+
           <TextInput
             style={styles.textInput}
             placeholder="Search"
@@ -69,9 +73,9 @@ const Home = () => {
 
           </TextInput>
         </View>
-         <Image source={
+        <Image source={
           require("./src/assets/ceta.png")
-        }/>
+        } />
       </View>
       <LinksHeader></LinksHeader>
 
@@ -80,6 +84,9 @@ const Home = () => {
   );
 
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -110,6 +117,5 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     color: "#F5FFFF",
   },
-  
-});
 
+});
